@@ -1,0 +1,40 @@
+.container {
+  padding: 40px;
+
+  .color-grey {
+    color: #aaa;
+  }
+
+  .input-query {
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    outline: black;
+  }
+
+  .col-thumbs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    app-article-thumb {
+      height: 33%;
+    }
+  }
+  .loading {
+    display: flex;
+    justify-content: center;
+  }
+  .load-more {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+    padding: .6em 1em .6em 1em;
+    color: white;
+    background-color: black;
+  }
+}

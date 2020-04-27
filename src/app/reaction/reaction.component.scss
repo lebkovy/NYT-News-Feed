@@ -1,0 +1,38 @@
+$color-initial: black;
+
+.action-handler {
+  background-color: white;
+  border: 1px $color-initial solid;
+  height: 30px;
+  width: auto;
+  align-self: center;
+  padding: 5px 20px 5px 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.filled {
+    border-width: 2px;
+  }
+
+  .action-name {
+    align-self: center;
+    width: 90%;
+    font-size: 14px;
+    color: $color-initial;
+
+    &.action-final {
+      font-weight: bold;
+    }
+  }
+
+  .far, .fas, .fab {
+    cursor: pointer;
+    align-self: center;
+    margin-left: 14px;
+    font-size: 14px;
+    color: $color-initial;
+  }
+}

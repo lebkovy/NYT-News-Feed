@@ -1,0 +1,6 @@
+<div (click)="changeState()" class="action-handler" [class.filled]="value"
+     [style]="value ? 'background-color:'+color+';border-color:'+color+';' : ''">
+  <div class="action-name" [class.action-final]="value"
+       [style]="value ? 'color:white;border-color:'+color+';' : ''">{{value ? textFinal : textInitial}}</div>
+  <i [class]="(value ? 'fas' : 'far') + ' ' +icon"  [style]="value ? 'color:white;' : ''" [@likeAction]=animationState></i>
+</div>
