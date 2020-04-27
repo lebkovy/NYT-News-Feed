@@ -1,0 +1,26 @@
+<div class="container-article">
+  <div class="image" [style.backgroundImage]="setImage()"></div>
+  <div class="body">
+    <div class="header">
+      <div class="title">{{article.headline.main}}</div>
+      <div class="subtitle">{{article.byline.original}}</div>
+    </div>
+    <div class="row flex-column no-gutters">
+      <div class="col-12">
+        <p class="font-weight-bold">{{article.abstract}}</p>
+        <p>{{article.lead_paragraph}} <a target="_blank" href="{{article.web_url}}">Read more</a></p>
+        <div class="reactions">
+          <app-reaction (reaction)="params.liked = $event" [value]="params.liked" color="rgb(56,88,152)"
+                        icon="fa-thumbs-up"
+                        textInitial="Like" textFinal="Liked!"></app-reaction>
+          <app-reaction (reaction)="params.favourite = $event" [value]="params.favourite" color="#E1306C"
+                        icon="fa-heart"
+                        textInitial="Favourite" textFinal="Favourite"></app-reaction>
+          <app-reaction (reaction)="params.read = $event" [value]="params.read" color="black" icon="fa-clock"
+                        textInitial="Read later" textFinal="Unmark"></app-reaction>
+        </div>
+        <small>Published {{article.pub_date | date: 'dd MMMM yyyy, HH.MM'}}</small>
+      </div>
+    </div>
+  </div>
+</div>

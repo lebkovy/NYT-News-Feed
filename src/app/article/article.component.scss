@@ -1,0 +1,57 @@
+$radius: 0;
+
+.container-article {
+  padding: 0;
+  border-radius: $radius;
+  height: 900px;
+  box-shadow: 0 15px 100px -60px rgba(0,0,0,.7);
+  position: relative;
+  z-index: 2;
+
+  .image {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    background-position: center;
+    background-size: cover;
+    transition: background-size .3s;
+    height: 300px;
+    background-repeat: no-repeat;
+
+  }
+
+  .body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .subtitle {
+        color: darkgrey;
+        font-weight: 300;
+      }
+
+    }
+
+    small {
+      color: #ccc;
+    }
+
+    .reactions {
+      display: flex;
+      margin: 2em 0 2em 0;
+
+      app-reaction {
+        margin-right: 10px;
+      }
+    }
+  }
+}

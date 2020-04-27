@@ -1,0 +1,28 @@
+.container-thumb {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  cursor: pointer;
+  margin-left: 10px;
+  box-shadow: 0 15px 100px -60px rgba(0, 0, 0, .7);
+  background-blend-mode: multiply;
+  background-position: center;
+  padding: 20px;
+  background-size: cover;
+  color: white;
+  transition: background .3s;
+
+  &:hover {
+    background: rgba(dodgerblue, .3) center 100%;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    color: darkgrey;
+  }
+}
